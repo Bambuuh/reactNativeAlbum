@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
-import { View } from 'react-native';
+import { ScrollView } from 'react-native';
 
 import AlbumDetail from './AlbumDetail';
 
 class AlbumList extends Component {
 
     state = { albums: [] };
+    style = {
+        paddingBottom: 10,
+    };
 
     componentWillMount() {
         fetch('https://rallycoding.herokuapp.com/api/music_albums')
@@ -21,9 +24,9 @@ class AlbumList extends Component {
 
     render() {
         return (
-            <View>
+            <ScrollView contentContainerStyle={this.style}>
                 {this.renderAlbums()}
-            </View>
+            </ScrollView>
         );
     }
 }
