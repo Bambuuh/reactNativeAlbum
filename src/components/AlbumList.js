@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
+import { View } from 'react-native';
 
 import AlbumDetail from './AlbumDetail';
 
@@ -24,7 +24,7 @@ class AlbumList extends Component {
             <View>
                 {this.renderAlbums()}
             </View>
-        )
+        );
     }
 }
 
